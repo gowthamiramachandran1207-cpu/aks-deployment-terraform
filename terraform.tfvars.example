@@ -1,0 +1,20 @@
+location            = "eastus"
+resource_group_name = "rg-aks-demo"
+cluster_name        = "aks-demo-cluster"
+dns_prefix         = "aks-demo"
+kubernetes_version = "1.29.7"
+node_count         = 2
+vm_size            = "Standard_DS2_v2"
+
+vnet_address_space      = ["10.10.0.0/16"]
+subnet_address_prefixes = ["10.10.1.0/24"]
+
+log_analytics_workspace_name = "law-aks-demo"
+log_analytics_sku            = "PerGB2018"
+
+# Example tags
+# tags = {
+#   environment = "dev"
+#   project     = "aks-demo"
+#   managed_by  = "terraform"
+# }
